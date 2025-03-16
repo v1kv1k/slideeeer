@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Слайдер</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Повнофункціональний слайдер на JavaScript</h1>
+        
+        <h2>Версія на прототипах</h2>
+        <div id="prototype-slider" class="slider-container">
+            <div class="slider-wrapper">
+                <div class="slider-item">
+                    <img src="https://picsum.photos/id/1/800/400" alt="Слайд 1">
+                </div>
+                <div class="slider-item">
+                    <img src="https://picsum.photos/id/10/800/400" alt="Слайд 2">
+                </div>
+                <div class="slider-item">
+                    <img src="https://picsum.photos/id/100/800/400" alt="Слайд 3">
+                </div>
+                <div class="slider-item">
+                    <img src="https://picsum.photos/id/1000/800/400" alt="Слайд 4">
+                </div>
+                <div class="slider-item">
+                    <img src="https://picsum.photos/id/1002/800/400" alt="Слайд 5">
+                </div>
+            </div>
+        </div>
+
+        <h2>Версія на класах</h2>
+        <div id="class-slider" class="slider-container">
+            <div class="slider-wrapper">
+                <div class="slider-item">
+                    <img src="https://picsum.photos/id/1015/800/400" alt="Слайд 1">
+                </div>
+                <div class="slider-item">
+                    <img src="https://picsum.photos/id/1016/800/400" alt="Слайд 2">
+                </div>
+                <div class="slider-item">
+                    <img src="https://picsum.photos/id/1018/800/400" alt="Слайд 3">
+                </div>
+                <div class="slider-item">
+                    <img src="https://picsum.photos/id/1019/800/400" alt="Слайд 4">
+                </div>
+                <div class="slider-item">
+                    <img src="https://picsum.photos/id/1021/800/400" alt="Слайд 5">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/slider-prototype.js"></script>
+    <script src="js/slider-class.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const prototypeSlider = new SliderPrototype('#prototype-slider', {
+                autoplay: true,
+                interval: 3000,
+                showIndicators: true,
+                showArrows: true
+            });
+
+            const classSlider = new SliderClass('#class-slider', {
+                autoplay: true,
+                interval: 5000,
+                showIndicators: true,
+                showArrows: true,
+                pauseOnHover: true
+            });
+        });
+    </script>
+</body>
+</html> 
